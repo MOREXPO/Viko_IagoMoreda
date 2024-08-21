@@ -52,7 +52,7 @@ En el contenedor del backend se creó un comando personalizado de Symfony que ut
 
 2. Creacion de la vista y los componentes de las graficas realizadas con  Chart.js y D3.js.
    
-   ![Captura de pantalla (17)](https://github.com/user-attachments/assets/b30eb97f-5a68-4f17-8788-bfcc148ea765)  
+   ![Captura de pantalla (22)](https://github.com/user-attachments/assets/78640061-0402-41db-a5c3-16a55d90c9e3)
    
    ![Captura de pantalla (18)](https://github.com/user-attachments/assets/8372aea5-0407-4fe2-868f-b917ac4bccff)  
    
