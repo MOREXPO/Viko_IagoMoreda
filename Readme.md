@@ -12,11 +12,9 @@ El proyecto está organizado en los siguientes contenedores Docker:
 **Descripción:** Contenedor donde reside la aplicación backend desarrollada con Symfony. Aquí se manejan las operaciones del servidor, como la gestión de datos y la ejecución de comandos.
 
 **Funciones principales:**
-1. Ejecutar comandos de Symfony.
-1.2. Comando de Scraping
-
+1. Ejecutar comandos de Symfony.  
+1.2. Comando de Scraping  
 En el contenedor del backend se creó un comando personalizado de Symfony que utiliza Selenium para realizar el scraping en Twitter y utiliza un analizador de sentimientos para ponderar cada tweet: `docker compose exec php bin/console app:fetch-tweets`
-
 2. Conectar con la base de datos MySQL y meter los tweets escrapeados en ella.
 3. Exponer la API mediante ApiPlatform.
 ### Frontend (Vite)
