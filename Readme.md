@@ -4,6 +4,24 @@
 
 Este proyecto es una aplicación web que utiliza una arquitectura basada en contenedores Docker para separar los diferentes componentes del sistema. La aplicación está compuesta por un backend desarrollado en Symfony, un frontend creado con Vite y un sistema de scraping automatizado utilizando Selenium para obtener datos de Twitter. La estructura está diseñada para ser fácilmente desplegada en un entorno de producción gracias a la separación de los servicios en diferentes contenedores Docker.
 
+Ademas se oculto el archivo .env, el cual es necesario para configurar nuestra app, con la siguiente estructura:
+```
+COMPOSE_PROJECT_NAME=
+MYSQL_ROOT_PASSWORD=
+MYSQL_DATABASE=
+MYSQL_USER=
+MYSQL_PASSWORD=
+
+TIMEZONE=
+APP_ENV=
+
+USERNAME_TWITTER=
+EMAIL_TWITTER=
+PASSWORD_TWITTER=
+
+CORS_ALLOW_ORIGIN=
+VITE_HOST=
+```
 ## Estructura del Proyecto
 El proyecto está organizado en los siguientes contenedores Docker:
 
