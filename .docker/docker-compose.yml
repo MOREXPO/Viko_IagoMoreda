@@ -30,11 +30,10 @@ services:
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-            TOKEN: ${TOKEN}
-            API_KEY: ${API_KEY}
-            API_KEY_SECRET: ${API_KEY_SECRET}
-            ACCESS_TOKEN: ${ACCESS_TOKEN}
-            ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET}
+            USERNAME_TWITTER: ${USERNAME_TWITTER}
+            EMAIL_TWITTER: ${EMAIL_TWITTER}
+            PASSWORD_TWITTER: ${PASSWORD_TWITTER}
+            CORS_ALLOW_ORIGIN: ${CORS_ALLOW_ORIGIN}
         networks:
             - symfony_app
     nginx:
@@ -59,6 +58,8 @@ services:
             - "5173:5173"
         volumes:
             - ../assets/:/srv/app
+        environment:
+            VITE_HOST: ${VITE_HOST}
         stdin_open: true
         tty: true
     web:

@@ -8,7 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiResource;
 
 #[ORM\Entity(repositoryClass: TweetRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    paginationItemsPerPage: 100
+)]
 class Tweet
 {
     #[ORM\Id]

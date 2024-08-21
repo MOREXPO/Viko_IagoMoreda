@@ -1,44 +1,27 @@
 <template>
-  <div class="h-100">
-    <notifications position="bottom right" />
-    <v-row no-gutters class="w-100 h-100">
-      <Head></Head>
-      <v-col class="w-100 h-100 pe-10 col-ajustado">
-        <Main></Main>
-      </v-col>
-    </v-row>
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <v-toolbar-title>VIKO - Iago Moreda Expósito</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn to="/tabla" text>Tabla</v-btn>
+      <v-btn to="/graficos" text>Graficos</v-btn>
+    </v-app-bar>
+    <v-main>
+      <router-view></router-view>
+    </v-main>
+  </v-app>
 </template>
-<script lang="ts">
+
+<script>
 import { mapState, mapActions } from 'pinia';
-import Main from './views/Main.vue';
-import Head from './views/Head.vue';
-
+import { tweetStore } from './stores/tweet';
 export default {
-  name: "App",
-  components: {
-    Main,
-    Head
-  },
-
-  methods: {
-  },
+  name: 'App',
   mounted() {
-    
+    this.fetchTweets();
   },
-}
+  methods: {
+    ...mapActions(tweetStore, ["fetchTweets"]),
+  },
+};
 </script>
-<style scoped>
-.col-ajustado {
-  padding-inline-end: 40px !important;
-}
-
-@media (max-width: 768px) {
-
-  /* Ajusta el tamaño según sea necesario */
-  .col-ajustado {
-    padding-inline-end: 0 !important;
-    /* Sobrescribe el padding en móviles */
-  }
-}
-</style>

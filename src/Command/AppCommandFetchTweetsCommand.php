@@ -42,15 +42,15 @@ class AppCommandFetchTweetsCommand extends Command
             $cliente = Client::createSeleniumClient(self::URL_SELENIUM, $capabilities);
             $crawler = $cliente->request('GET', 'https://x.com/search?q=%28%23farina%29&src=typed_query&f=live');
             $crawler = $cliente->waitFor('input[name="text"]');
-            $crawler->filter('input[name="text"]')->sendKeys('iagomoreda1910@gmail.com');
+            $crawler->filter('input[name="text"]')->sendKeys($_ENV['EMAIL_TWITTER']);
             sleep(2);
             $crawler->filter('button[class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-ywje51 r-184id4b r-13qz1uu r-2yi16 r-1qi8awa r-3pj75a r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l"]')->click();
             $crawler = $cliente->waitFor('input[name="text"]');
-            $crawler->filter('input[name="text"]')->sendKeys('iagomoreda1910');
+            $crawler->filter('input[name="text"]')->sendKeys($_ENV['USERNAME_TWITTER']);
             sleep(2);
             $crawler->filter('button[class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-19yznuf r-64el8z r-1fkl15p r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l"]')->click();
             $crawler = $cliente->waitFor('input[name="password"]');
-            $crawler->filter('input[name="password"]')->sendKeys('iagome1910');
+            $crawler->filter('input[name="password"]')->sendKeys($_ENV['PASSWORD_TWITTER']);
             sleep(2);
             $crawler->filter('button[class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-19yznuf r-64el8z r-1fkl15p r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l"]')->click();
             sleep(10);
