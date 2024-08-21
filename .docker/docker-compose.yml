@@ -30,6 +30,11 @@ services:
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            TOKEN: ${TOKEN}
+            API_KEY: ${API_KEY}
+            API_KEY_SECRET: ${API_KEY_SECRET}
+            ACCESS_TOKEN: ${ACCESS_TOKEN}
+            ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET}
         networks:
             - symfony_app
     nginx:
@@ -66,6 +71,18 @@ services:
         restart: unless-stopped
         depends_on:
             - node
+    selenium:
+        image: selenium/standalone-firefox:4
+        restart: unless-stopped
+        environment:
+            TZ: Europe/Madrid
+            VNC_NO_PASSWORD: 1
+        ports:
+            - "4444:4444"
+            - "7900:7900"
+        networks:
+            - symfony_app
+
 
 volumes:
     symfony_app_var:
