@@ -15,7 +15,7 @@ El proyecto está organizado en los siguientes contenedores Docker:
 1. Ejecutar comandos de Symfony.
 1.2. Comando de Scraping
 
-En el contenedor del backend se creó un comando personalizado de Symfony que utiliza Selenium para realizar el scraping en Twitter: `docker compose exec php bin/console app:fetch-tweets`
+En el contenedor del backend se creó un comando personalizado de Symfony que utiliza Selenium para realizar el scraping en Twitter y utiliza un analizador de sentimientos para ponderar cada tweet: `docker compose exec php bin/console app:fetch-tweets`
 
 2. Conectar con la base de datos MySQL y meter los tweets escrapeados en ella.
 3. Exponer la API mediante ApiPlatform.
@@ -25,7 +25,14 @@ En el contenedor del backend se creó un comando personalizado de Symfony que ut
 
 **Funciones principales:**
 1. Creacion de la vista y el componente de la tabla realizado con el datatable de vuetify.
+   ![Captura de pantalla (15)](https://github.com/user-attachments/assets/bdf02fe0-3093-4771-8ed0-d422a9d576a4)
+   ![Captura de pantalla (16)](https://github.com/user-attachments/assets/37060b5c-2903-43a3-a6c8-5e0ae0cdc292)
+
 2. Creacion de la vista y los componentes de las graficas realizadas con  Chart.js y D3.js.
+   ![Captura de pantalla (17)](https://github.com/user-attachments/assets/b30eb97f-5a68-4f17-8788-bfcc148ea765)
+   ![Captura de pantalla (18)](https://github.com/user-attachments/assets/8372aea5-0407-4fe2-868f-b917ac4bccff)
+   ![Captura de pantalla (20)](https://github.com/user-attachments/assets/ddffedf1-83e2-4b76-9e51-6f5f54e1c809)
+
 ### Servidor Nginx para Backend
 
 **Descripción:** Servidor Nginx que actúa como un proxy inverso para el backend.
@@ -37,6 +44,13 @@ En el contenedor del backend se creó un comando personalizado de Symfony que ut
 **Descripción:** Servidor Nginx que actúa como un proxy inverso para el frontend cuando se despliega en producción.
 **Funciones principales:**
 1. Servir el frontend en producción.
+
+### Contenedor de MySQL
+
+**Descripción:** Contenedor que ejecuta MySQL, utilizado como la base de datos principal de la aplicación. Almacena todos los datos, incluyendo los tweets extraídos por Selenium.
+**Funciones principales:**
+1. Facilitar la gestión y administración de la base de datos mediante el mapeo de puertos para permitir el acceso desde el exterior del contenedor.
+   ![Captura de pantalla (14)](https://github.com/user-attachments/assets/8a9a5c4f-7b8e-4656-b166-e1ad51bd46ea)
 
 ### Contenedor de Selenium
 
