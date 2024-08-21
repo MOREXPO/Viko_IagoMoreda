@@ -22,6 +22,10 @@ PASSWORD_TWITTER=
 CORS_ALLOW_ORIGIN=
 VITE_HOST=
 ```
+y el archivo .env.nginx.local, con la siguiente estructura:
+```
+NGINX_BACKEND_DOMAIN=''
+```
 ## Estructura del Proyecto
 El proyecto está organizado en los siguientes contenedores Docker:
 
