@@ -46,17 +46,22 @@ En el contenedor del backend se creó un comando personalizado de Symfony que ut
 **Funciones principales:**
 1. Creacion de la vista y el componente de la tabla realizado con el datatable de vuetify.
    
-   ![Captura de pantalla (15)](https://github.com/user-attachments/assets/bdf02fe0-3093-4771-8ed0-d422a9d576a4)  
+   ![Captura de pantalla (15)](https://github.com/user-attachments/assets/0199b003-8950-4788-b192-5c89394422ac)
+
    
-   ![Captura de pantalla (16)](https://github.com/user-attachments/assets/37060b5c-2903-43a3-a6c8-5e0ae0cdc292)
+   ![Captura de pantalla (16)](https://github.com/user-attachments/assets/228be8f3-b289-4243-ad7d-f8844216af16)
+
 
 2. Creacion de la vista y los componentes de las graficas realizadas con  Chart.js y D3.js.
    
-   ![Captura de pantalla (22)](https://github.com/user-attachments/assets/78640061-0402-41db-a5c3-16a55d90c9e3)
+   ![Captura de pantalla (22)](https://github.com/user-attachments/assets/abe72a87-e449-4f49-a8e7-558ce22bae2b)
+
    
-   ![Captura de pantalla (18)](https://github.com/user-attachments/assets/8372aea5-0407-4fe2-868f-b917ac4bccff)  
+   ![Captura de pantalla (18)](https://github.com/user-attachments/assets/c97ecbf5-5531-45ad-b3ce-f14bc026ea4d)
+
    
-   ![Captura de pantalla (20)](https://github.com/user-attachments/assets/ddffedf1-83e2-4b76-9e51-6f5f54e1c809)
+   ![Captura de pantalla (20)](https://github.com/user-attachments/assets/85a33ead-c75b-447b-9e6c-58a3f8a1da45)
+
 
 ### Servidor Nginx para Backend
 
@@ -76,7 +81,8 @@ En el contenedor del backend se creó un comando personalizado de Symfony que ut
 **Funciones principales:**
 1. Facilitar la gestión y administración de la base de datos mediante el mapeo de puertos para permitir el acceso desde el exterior del contenedor.
    
-   ![Captura de pantalla (14)](https://github.com/user-attachments/assets/8a9a5c4f-7b8e-4656-b166-e1ad51bd46ea)
+   ![Captura de pantalla (14)](https://github.com/user-attachments/assets/cd67ee8e-f007-44aa-a558-d625879d5890)
+
 
 ### Contenedor de Selenium
 
