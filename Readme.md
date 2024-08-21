@@ -26,15 +26,15 @@ En el contenedor del backend se creó un comando personalizado de Symfony que ut
 **Funciones principales:**
 1. Creacion de la vista y el componente de la tabla realizado con el datatable de vuetify.
    
-   ![Captura de pantalla (15)](https://github.com/user-attachments/assets/bdf02fe0-3093-4771-8ed0-d422a9d576a4)
+   ![Captura de pantalla (15)](https://github.com/user-attachments/assets/bdf02fe0-3093-4771-8ed0-d422a9d576a4)  
    
    ![Captura de pantalla (16)](https://github.com/user-attachments/assets/37060b5c-2903-43a3-a6c8-5e0ae0cdc292)
 
 2. Creacion de la vista y los componentes de las graficas realizadas con  Chart.js y D3.js.
    
-   ![Captura de pantalla (17)](https://github.com/user-attachments/assets/b30eb97f-5a68-4f17-8788-bfcc148ea765)
+   ![Captura de pantalla (17)](https://github.com/user-attachments/assets/b30eb97f-5a68-4f17-8788-bfcc148ea765)  
    
-   ![Captura de pantalla (18)](https://github.com/user-attachments/assets/8372aea5-0407-4fe2-868f-b917ac4bccff)
+   ![Captura de pantalla (18)](https://github.com/user-attachments/assets/8372aea5-0407-4fe2-868f-b917ac4bccff)  
    
    ![Captura de pantalla (20)](https://github.com/user-attachments/assets/ddffedf1-83e2-4b76-9e51-6f5f54e1c809)
 
